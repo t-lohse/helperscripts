@@ -17,7 +17,7 @@ pic() {
     grep -v "$path" "$cLoc" > delete.me && mv -f delete.me "$cLoc"
 }
 
-cLoc="$DOT_DIR/swaylock/config"
+cLoc="/home/lohse/dotfiles/swaylock/config"
 bgDir="$HOME/Documents/Pictures/Lockscreen/"
 
 ((num = $(ls $bgDir | wc -l)))

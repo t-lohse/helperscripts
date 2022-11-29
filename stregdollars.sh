@@ -2,7 +2,7 @@
 s=$(python3 ~/sts.py -u lohse -b 2>/dev/null | tail -1 )
 if [[ $s =~ ^[0-9/+.]+$ ]]; then 
     echo $s > ~/stregdollars
-    product=$(echo ':q' | python3 ~/sts.py -l 2> /dev/null | tail -n +4 | head -1)
+    product=$(echo ':q' | python3 ~/sts.py -l 2> /dev/null | tail -n +5 | head -1)
     product=${product% *}
     price=${product##* }
     product=${product% *}
@@ -12,7 +12,7 @@ if [[ $s =~ ^[0-9/+.]+$ ]]; then
     product=${product#* }
     slice="${product%%* }"
     product=$(echo $product | sed 's/^\ *//g')
-    number=$(echo ":q" | python3 ~/sts.py -u lohse | grep "$(echo $product)")
+    number=$(echo ":q" | python3 ~/sts.py -u lohse | grep "$product")
     number=${number%% *}
 fi
 wait

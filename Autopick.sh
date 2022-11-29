@@ -24,7 +24,8 @@ bgDir="$HOME/Documents/Pictures/Lockscreen/"
 if [ $(shuf -n 1 -i 1-$num) = $num ]; then
     neo
 else
-    path="image=$(find $bgDir -type f | shuf -n 1)"
-    pic
+    echo "$(find $bgDir -type f | shuf -n 1)"
+    # path="image=$(find $bgDir -type f | shuf -n 1)"
+    # pic
 fi
 
